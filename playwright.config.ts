@@ -5,5 +5,6 @@ export default defineConfig({
   use: {
     baseURL: 'https://playwright.dev',
     headless: true
-  }
+  },
+  reporter: [["html", {outputFolder : "playwright-report", open: "never"}]]
 })

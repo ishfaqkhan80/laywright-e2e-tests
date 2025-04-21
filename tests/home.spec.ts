@@ -9,3 +9,9 @@ test("homepage loads and has correct title", async({ page }) => {
 
     expect(title).toContain('Playwright')
 })
+
+test("homepage screenshot", async({ page }, testInfo) => {
+    const screenshotPath = testInfo.outputPath("homepage.png")
+    
+    await page.screenshot({path : screenshotPath, fullPage : true})
+})
